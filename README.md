@@ -1,33 +1,35 @@
-# Example app with [chakra-ui](https://github.com/chakra-ui/chakra-ui) and TypeScript
+### 使い始めるとき
 
-This example features how to use [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app with TypeScript.
+- プロジェクトを始めるディレクトリ上で`git clone`します。
 
-Next.js and chakra-ui have built-in TypeScript declarations, so we'll get autocompletion for their modules straight away.
-
-We are connecting the Next.js `_app.js` with `chakra-ui`'s Provider and theme so the pages can have app-wide dark/light mode. We are also creating some components which shows the usage of `chakra-ui`'s style props.
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-chakra-ui-typescript)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui-typescript&project-name=with-chakra-ui-typescript&repository-name=with-chakra-ui-typescript)
-
-## How to use
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-chakra-ui-typescript with-chakra-ui-typescript-app
-# or
-yarn create next-app --example with-chakra-ui-typescript with-chakra-ui-typescript-app
+```
+git clone [雛形となるリポジトリのURL] .　←最後に"."をつけるとリポジトリの中身だけcloneされる
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- 一度`git remote -v`コマンドでリモートの追跡対象を確認
 
-## Notes
+```
+git remote -v
 
-Chakra has supported Gradients and RTL in `v1.1`. To utilize RTL, [add RTL direction and swap](https://chakra-ui.com/docs/features/rtl-support).
+origin  https://github.com/dende-h/[雛形のリポジトリ名].git (fetch)
+origin  https://github.com/dende-h/[雛型のリポジトリ名].git (push)
+```
 
-If you don't have multi-direction app, you should make `<Html lang="ar" dir="rtl">` inside `_document.ts`.
+- GitHubに新しいプロジェクトのリポジトリを作ってそこと連携する
+
+```
+git remote set-url origin [新しいリポジトリのURL]
+
+git remote -v
+
+origin  https://github.com/dende-h/[新しいリポジトリ名].git (fetch)
+origin  https://github.com/dende-h/[新しいリポジトリ名].git (push)
+
+こうなればOK
+```
+
+- 最後に`git pull origin`を忘れずに
+
+```
+git pull origin
+```
